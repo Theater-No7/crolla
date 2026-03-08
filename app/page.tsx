@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle2, Shield, Eye, FolderSync as FileSync, Languages, LogIn } from "lucide-react"
 import Link from "next/link"
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
 } from "@/components/ui/accordion"
 import Typewriter from 'typewriter-effect';
 import Marquee from "react-fast-marquee";
@@ -47,12 +47,12 @@ const translations = {
             />
           </span>
           Webコンテンツ自動同期AI
-          <br className="hidden md:block" />『 
+          <br className="hidden md:block" />『
           <span className="inline-block relative w-35 h-22 md:w-48 md:h-22 align-bottom ml-2 -mb-1 md:-mb-2 overflow-hidden">
-            <img 
-              src="/logo-full.png" 
-              alt="Crolla" 
-              className="absolute inset-0 w-full h-full object-cover" 
+            <img
+              src="/logo-full.png"
+              alt="Crolla"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </span>』
         </div>
@@ -60,7 +60,7 @@ const translations = {
       subheadline:
         "プロダクトの進化に合わせて、AIがサイトを自動更新。ヘルプページやオウンドメディアの「情報の食い違い」をなくし、信頼されるサービスへ。",
       cta: "無料で試す",
-      trustBadge: "GMO Pepabo運営",
+      trustBadge: "theater.no7運営",
     },
     socialProof: {
       title: "イノベーティブなチームに信頼されています",
@@ -175,7 +175,7 @@ const translations = {
       },
     },
     footer: {
-      copyright: "© 2025 GMO Pepabo, Inc. All rights reserved.",
+      copyright: "© 2025 theater.no7 All rights reserved.",
       product: "製品",
       company: "会社情報",
       legal: "法的事項",
@@ -199,7 +199,7 @@ const translations = {
       subheadline:
         "AI automatically updates your site as your product evolves. Eliminate information discrepancies and build a trusted service.",
       cta: "Try for Free",
-      trustBadge: "Operated by GMO Pepabo",
+      trustBadge: "Operated by theater.no7",
     },
     socialProof: {
       title: "Trusted by innovative teams",
@@ -305,7 +305,7 @@ const translations = {
       },
     },
     footer: {
-      copyright: "© 2025 GMO Pepabo, Inc. All rights reserved.",
+      copyright: "© 2025 theater.no7 All rights reserved.",
       product: "Product",
       company: "Company",
       legal: "Legal",
@@ -327,7 +327,7 @@ export default function CrollaLandingPage() {
     if (!url) return
     setIsAnalyzing(true)
     setAnalysisComplete(false)
-    
+
     // 2秒後に「完了」にする演出
     setTimeout(() => {
       setIsAnalyzing(false)
@@ -347,7 +347,7 @@ export default function CrollaLandingPage() {
       return Math.random() * (max - min) + min;
     }
 
-    const interval: any = setInterval(function() {
+    const interval: any = setInterval(function () {
       const timeLeft = animationEnd - Date.now();
 
       if (timeLeft <= 0) {
@@ -366,12 +366,12 @@ export default function CrollaLandingPage() {
       <MouseFollower />
       <ScrollProgress />
       {/* Sticky Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+      <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/95 backdrop-blur supports-backdrop-filter:bg-white/80">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <a href="#" className="block h-10 w-40 relative overflow-hidden group">
-            <img 
-              src="/logo-full.png" 
-              alt="Crolla" 
+            <img
+              src="/logo-full.png"
+              alt="Crolla"
               className="absolute inset-0 h-full w-21 object-cover group-hover:opacity-80 transition-opacity"
             />
           </a>
@@ -399,17 +399,17 @@ export default function CrollaLandingPage() {
               {lang === "jp" ? "EN" : "JP"}
             </Button>
             <Link href="/login">
-            <Button variant="outline" size="sm" className="gap-2 border-[#0055FF] text-[#0055FF] hover:bg-[#0055FF]/10 bg-transparent">
+              <Button variant="outline" size="sm" className="gap-2 border-[#0055FF] text-[#0055FF] hover:bg-[#0055FF]/10 bg-transparent">
                 <LogIn className="h-4 w-4" />
                 {t.nav.login}
-            </Button>
+              </Button>
             </Link>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-blue-50/30 to-white py-20 md:py-32">
+      <section className="relative overflow-hidden bg-linear-to-br from-white via-blue-50/30 to-white py-20 md:py-32">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-16">
             <div className="flex-1 text-center md:text-left z-10">
@@ -420,13 +420,12 @@ export default function CrollaLandingPage() {
                 {t.hero.subheadline}
               </p>
               <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-gray-500 font-medium mb-8">
-                <img src="/pepabo-logo.svg" alt="GMO Pepabo" className="h-5 w-auto opacity-70" /> 
                 <span>{t.hero.trustBadge}</span>
               </div>
               <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
                 <Link href="/login">
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="bg-[#0055FF] hover:bg-[#0044CC] text-white px-8 w-full sm:w-auto shadow-lg shadow-blue-500/20"
                     onClick={triggerConfetti}
                   >
@@ -462,8 +461,8 @@ export default function CrollaLandingPage() {
                         disabled={isAnalyzing || analysisComplete}
                       />
                       <div className="absolute right-1 top-1 bottom-1">
-                        <Button 
-                          type="submit" 
+                        <Button
+                          type="submit"
                           size="sm"
                           className={`h-full px-4 ${analysisComplete ? 'bg-green-500 hover:bg-green-600' : 'bg-[#0F172A] hover:bg-[#1E293B]'} text-white transition-all`}
                           disabled={isAnalyzing}
@@ -487,7 +486,7 @@ export default function CrollaLandingPage() {
                       <div>
                         <p className="text-xs font-bold text-green-800">3件の更新推奨箇所を検知！</p>
                         <p className="text-[10px] text-green-600 leading-tight mt-1">
-                          古い価格表記とリンク切れが見つかりました。<br/>
+                          古い価格表記とリンク切れが見つかりました。<br />
                           <Link href="/login" className="underline hover:text-green-800 font-medium">詳細レポートを見る →</Link>
                         </p>
                       </div>
@@ -509,7 +508,7 @@ export default function CrollaLandingPage() {
           <Marquee gradient={false} speed={40} pauseOnHover={true}>
             <div className="flex items-center gap-16 md:gap-24 px-8">
               {[1, 2, 3, 4, 5, 1, 2, 3, 4, 5].map((i, index) => (
-                <div key={index} className="flex items-center justify-center h-16 w-32 md:w-40 flex-shrink-0 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
+                <div key={index} className="flex items-center justify-center h-16 w-32 md:w-40 shrink-0 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer">
                   <img
                     src={`/company-${i}.svg`}
                     alt={`Partner Company ${i}`}
@@ -528,47 +527,47 @@ export default function CrollaLandingPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12">{t.problem.title}</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000}>
-            <Card className="border-2 border-gray-200 h-full">
-              <CardHeader>
-                <CardTitle className="text-xl text-[#0F172A]">{t.problem.before.title}</CardTitle>
-                <CardDescription className="text-gray-600">{t.problem.before.desc}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-gray-50 rounded-lg mb-4 h-80 flex items-center justify-center text-gray-400 overflow-hidden relative">
+              <Card className="border-2 border-gray-200 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#0F172A]">{t.problem.before.title}</CardTitle>
+                  <CardDescription className="text-gray-600">{t.problem.before.desc}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="bg-gray-50 rounded-lg mb-4 h-80 flex items-center justify-center text-gray-400 overflow-hidden relative">
                     <img src="/before.jpg" alt="Before" className="w-full h-full object-cover" />
-                </div>
-                <ul className="space-y-2">
-                  {t.problem.before.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                      <span className="text-red-500 mt-1">✗</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.problem.before.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                        <span className="text-red-500 mt-1">✗</span>
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </Tilt>
 
             <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} scale={1.02} transitionSpeed={2000}>
-            <Card className="border-2 border-[#0055FF] shadow-lg shadow-blue-100 h-full">
-              <CardHeader>
-                <CardTitle className="text-xl text-[#0055FF]">{t.problem.after.title}</CardTitle>
-                <CardDescription className="text-gray-600">{t.problem.after.desc}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-blue-50 rounded-lg mb-4 h-80 flex items-left justify-left overflow-hidden relative">
+              <Card className="border-2 border-[#0055FF] shadow-lg shadow-blue-100 h-full">
+                <CardHeader>
+                  <CardTitle className="text-xl text-[#0055FF]">{t.problem.after.title}</CardTitle>
+                  <CardDescription className="text-gray-600">{t.problem.after.desc}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="bg-blue-50 rounded-lg mb-4 h-80 flex items-left justify-left overflow-hidden relative">
                     <img src="/after.jpg" alt="After" className="w-full h-full object-cover" />
-                </div>
-                <ul className="space-y-2">
-                  {t.problem.after.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] flex-shrink-0" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+                  </div>
+                  <ul className="space-y-2">
+                    {t.problem.after.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                        <CheckCircle2 className="h-5 w-5 text-[#0055FF] shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
             </Tilt>
           </div>
         </div>
@@ -592,11 +591,10 @@ export default function CrollaLandingPage() {
                   <button
                     key={feature.id}
                     onClick={() => setActiveFeature(index)}
-                    className={`text-left p-6 rounded-xl transition-all duration-300 border-2 ${
-                      isActive 
-                        ? "bg-white border-[#0055FF] shadow-lg scale-105" 
+                    className={`text-left p-6 rounded-xl transition-all duration-300 border-2 ${isActive
+                        ? "bg-white border-[#0055FF] shadow-lg scale-105"
                         : "bg-white border-transparent hover:border-blue-200 hover:bg-blue-50/50"
-                    }`}
+                      }`}
                   >
                     <div className={`flex items-center gap-4 mb-2 ${isActive ? "text-[#0055FF]" : "text-gray-500"}`}>
                       <Icon className="h-6 w-6" />
@@ -626,21 +624,21 @@ export default function CrollaLandingPage() {
                     <div className="bg-slate-900 rounded-xl p-2 shadow-2xl border border-slate-800">
                       {/* ブラウザのバー */}
                       <div className="flex items-center gap-2 mb-2 px-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500"/>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500"/>
-                        <div className="w-3 h-3 rounded-full bg-green-500"/>
-                        <div className="ml-4 flex-1 bg-slate-800 h-6 rounded-md"/>
+                        <div className="w-3 h-3 rounded-full bg-red-500" />
+                        <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                        <div className="w-3 h-3 rounded-full bg-green-500" />
+                        <div className="ml-4 flex-1 bg-slate-800 h-6 rounded-md" />
                       </div>
                       {/* 画像本体 */}
-                      <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-slate-950">
-                        <img 
-                          src={t.features.items[activeFeature].image} 
+                      <div className="relative aspect-16/10 overflow-hidden rounded-lg bg-slate-950">
+                        <img
+                          src={t.features.items[activeFeature].image}
                           alt={t.features.items[activeFeature].title}
                           className="w-full h-full object-cover object-top"
                         />
                       </div>
                     </div>
-                    
+
                     {/* 装飾用の背景ブラー */}
                     <div className="absolute -inset-4 bg-[#0055FF]/20 blur-3xl -z-10 rounded-full opacity-50" />
                   </motion.div>
@@ -654,7 +652,7 @@ export default function CrollaLandingPage() {
       {/* How it Works Section */}
       <section className="py-24 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -670,7 +668,7 @@ export default function CrollaLandingPage() {
             <div className="hidden md:block absolute top-12 left-2/3 w-1/3 border-t-2 border-dashed border-gray-200 -z-10" />
 
             {/* Step 1 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -688,7 +686,7 @@ export default function CrollaLandingPage() {
             </motion.div>
 
             {/* Step 2 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -706,7 +704,7 @@ export default function CrollaLandingPage() {
             </motion.div>
 
             {/* Step 3 */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
@@ -753,7 +751,7 @@ export default function CrollaLandingPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0F172A] mb-12">
             {t.faq.title}
           </h2>
-          
+
           <Accordion type="single" collapsible className="w-full">
             {t.faq.items.map((item: any, i: number) => (
               <AccordionItem key={i} value={`item-${i}`} className="border-b border-gray-200">
@@ -789,7 +787,7 @@ export default function CrollaLandingPage() {
                 <ul className="space-y-3 mb-6">
                   {t.pricing.free.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -820,7 +818,7 @@ export default function CrollaLandingPage() {
                 <ul className="space-y-3 mb-6">
                   {t.pricing.pro.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -840,7 +838,7 @@ export default function CrollaLandingPage() {
                 <ul className="space-y-3 mb-6">
                   {t.pricing.enterprise.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
-                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="h-5 w-5 text-[#0055FF] shrink-0 mt-0.5" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -865,9 +863,9 @@ export default function CrollaLandingPage() {
               {/* フッターロゴ開始 */}
               <div className="mb-6">
                 <a href="#" className="block h-20 w-32 relative overflow-hidden group">
-                  <img 
-                    src="/logo-full.png" 
-                    alt="Crolla" 
+                  <img
+                    src="/logo-full.png"
+                    alt="Crolla"
                     className="absolute inset-0 h-full w-full object-cover group-hover:opacity-80 transition-opacity"
                   />
                 </a>
