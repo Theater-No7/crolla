@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 Crolla (クローラ) 
 
-## Getting Started
+[![Deploy with Vercel](https://vercelbutton.com/api/button?format=svg)](https://crolla-app.vercel.app/)
 
-First, run the development server:
+**「プロダクトの進化に、ドキュメントを置いてきぼりにしない」** Crollaは、アジャイル開発で日々進化するWebサービスと、ヘルプページやマニュアルといったコンテンツの間に生じる「内容の齟齬」を自動で検出・更新提案を行うAIクローリングツールのプロトタイプです。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🌐 **Live Demo:** [https://crolla-app.vercel.app/](https://crolla-app.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💡 コンセプト・特徴
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+アジャイル開発の現場において、「機能はアップデートされたのに、マニュアルの修正が追いついていない」という課題を解決するために生まれました。
 
-## Learn More
+* **👥 ビジネス職に寄り添うUX** エンジニアだけでなく、日々の業務でマニュアルを管理するカスタマーサクセス（CS）やマーケターの方が直感的に操作できるUI/UXを追求しています。
+* **📈 ROIの可視化（SaaS向け設計）** 導入によって「どれだけの工数が削減されたか」がダッシュボードで一目でわかる仕様にし、サブスクリプション型の継続利用を前提としたBtoB SaaSとしてのビジネスロジックをプロトタイプに落とし込んでいます。
+* **⚡ 生成AI（v0）による爆速プロトタイピング** 「頭の中のアイデアを最速で形にする」ことを目的に、AIアシスタント（v0）をペアプログラマーとして活用。構想からわずか数日でフロントエンドの実装・デプロイまで完了させました。
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 デモ版の遊び方
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+本アプリはUI/UXの検証を目的としたプロトタイプ版です。  
+面倒なアカウント登録は不要で、すぐにダッシュボードの世界観を体験いただけます！
 
-## Deploy on Vercel
+1. [デモサイト（Vercel）](https://crolla-app.vercel.app/) にアクセスします。
+2. ログイン画面にて、**適当なメールアドレスとパスワード**（例: `test@example.com` / `123456` など、何でもOKです！）を入力してください。
+3. そのまま「ログイン」ボタンを押すと、Crollaのダッシュボード画面へ遷移します🎉
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠 使用技術 (Tech Stack)
+
+* **Framework:** React (Next.js)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Hosting:** Vercel (※Firebase Hostingから移行)
+* **AI Tool:** v0 by Vercel
+
+---
+
+## 👤 作者 (Author)
+
+**Leo Sato (Theater-No7)** UI/UXとテクノロジーの力で「ユーザーの摩擦」をなくすプロダクト開発を目指しています。
+
+* **Portfolio:** [https://theater-no7-portfolio-2026.vercel.app/](https://theater-no7-portfolio-2026.vercel.app/)
+* **GitHub:** [@Theater-No7](https://github.com/Theater-No7)
+* **Note:** [7番劇場](https://note.com/theater_no7)
